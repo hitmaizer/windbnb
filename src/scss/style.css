@@ -44,6 +44,10 @@ body {
   padding: 32px;
 }
 
+.active {
+  width: 100vw;
+}
+
 input {
   border: none;
   text-indent: 16px;
@@ -99,6 +103,22 @@ input {
 
 .result__icon {
   color: #4F4F4F;
+}
+
+.content__wrapper {
+  height: 50vh;
+  margin: auto;
+  padding-top: 200px;
+}
+
+.searchbar__drawer {
+  width: 1248px;
+}
+
+.drawer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .hero__wrapper {

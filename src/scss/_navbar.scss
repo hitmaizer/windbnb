@@ -4,6 +4,11 @@
     padding: 32px;
 }
 
+.active {
+    width: 100vw;
+    
+}
+
 input {
     border: none;
     text-indent: 16px;
@@ -61,7 +66,23 @@ input {
 
 .result__icon {
     color: $mediumGray;
-    
-   
 
+
+}
+
+.content__wrapper {
+    height: 50vh;
+    margin: auto;
+    padding-top: 200px;
+}
+
+.searchbar__drawer {
+    width: 1248px;
+    
+    
+}
+
+.drawer {
+    justify-content: space-between;
+    
 }
