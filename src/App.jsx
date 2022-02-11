@@ -19,8 +19,8 @@ export default function App() {
     return (
         <ThemeProvider theme={Theme}>
             <div className="page__wrapper">
-                <Navbar />
-                <Hero data={data}/>
+                <Navbar data={data} />
+                <Hero data={data} />
                 <footer className="footer__sign">created by <b><u>Jose Alves</u></b> - devChallenges.io </footer>
             </div>
         </ThemeProvider>
