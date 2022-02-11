@@ -48,7 +48,7 @@ body {
   width: 100vw;
 }
 
-input {
+.search__input {
   border: none;
   text-indent: 16px;
   height: 58px;
@@ -119,6 +119,10 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.input--drawer {
+  width: 426px;
 }
 
 .hero__wrapper {

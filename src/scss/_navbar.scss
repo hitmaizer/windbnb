@@ -9,7 +9,7 @@
     
 }
 
-input {
+.search__input {
     border: none;
     text-indent: 16px;
     height: 58px;
@@ -85,4 +85,8 @@ input {
 .drawer {
     justify-content: space-between;
     
+}
+
+.input--drawer {
+    width: 426px;
 }
