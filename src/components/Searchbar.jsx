@@ -56,22 +56,38 @@ export default function Searchbar(props) {
                             <div className="searchbar__wrapper searchbar__drawer">
                                 <div className="navbar__search flex-row drawer">
                                     <div className="search__location">
-                                        <input type="text" className="search__input" placeholder='Search Location' value={wordEntered} onChange={handleFilter} />
+                                        <input type="text" className="search__input input--drawer" placeholder='Search Location' value={wordEntered} onChange={handleFilter} />
                                     </div>
 
                                     <div className="search__guests">
-                                        <input type="text" className="search__input" placeholder="Add guests" />
+                                        <input type="number" className="search__input input--drawer" placeholder="Add guests" />
                                     </div>
                                     <div className="search__icon">
                                         {filteredData.length === 0 ? <Search size="24px" /> : <Close size="24px" id="clearBtn" onClick={clearInput} />}
                                     </div>
                                 </div>
                             </div>
+                            <div className="results flex-row">
+                                {filteredData.length !== 0 && 
+                                    <div className="data__result">
+                                    {filteredData.map((value, key) => {
+                                        return (
+                                            <div className="result flex-row" key={nanoid()}>
+                                                <LocationPin size="24px" className="result__icon" />
+                                                <p className="result__text">{value.city}, {value.country}</p>
+                                            </div>
+                                        )
+                                    })}
+                                    </div> 
+                                }
+                            </div>
                         </div>
             </Drawer>
                     </div>
                     <div className="search__guests">
-                        <input type="text" className="search__input" placeholder="Add guests" />
+                    <Button onClick={toggleDrawer(true)}>
+                        <input type="number" className="search__input" placeholder="Add guests" />
+                    </Button>
                     </div>
                     <div className="search__icon">
                         {filteredData.length === 0 ? <Search size="24px" /> : <Close size="24px" id="clearBtn" onClick={clearInput} />}
