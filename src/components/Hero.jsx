@@ -1,7 +1,20 @@
 import React from 'react';
 import StaysCard from '../components/StaysCard'
+import { nanoid } from 'nanoid'
 
-export default function Hero() {
+export default function Hero(props) {
+
+    const cardElements = props.data.map(work => <StaysCard 
+        key={nanoid()}
+        superHost={work.superHost}
+        beds={work.beds}
+        type={work.type}
+        rating={work.rating}
+        title={work.title}
+        image={work.photo}
+    
+    />)
+    
     return (
         <div className="hero__wrapper">
             <div className="hero__titles flex-row">
@@ -9,12 +22,7 @@ export default function Hero() {
                 <h5 className="hero__count">12+ stays</h5>
             </div>
             <div className="stays__section">
-                <StaysCard />
-                <StaysCard />
-                <StaysCard />
-                <StaysCard />
-                <StaysCard />
-                <StaysCard />
+                {cardElements}
             </div>
         </div>
     )
