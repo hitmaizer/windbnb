@@ -24,6 +24,44 @@ input {
 
 .search__icon {
     color: $primary;
+    padding: 8px;
+    
+}
+
+#clearBtn {
+    cursor: pointer;
+}
+
+.result {
+    gap: 8px;
+    margin: 8px;
     cursor: pointer;
     
+    &:hover {
+        .result__icon {
+            color: $primary;
+        }
+
+        .result__text {
+            color: black;
+        }
+    }
+    
+}
+
+.result__text {
+    font-family: $mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: $mediumGray;
+    
+}
+
+.result__icon {
+    color: $mediumGray;
+    
+   
+
 }

@@ -67,7 +67,38 @@ input {
 
 .search__icon {
   color: #EB5757;
+  padding: 8px;
+}
+
+#clearBtn {
   cursor: pointer;
+}
+
+.result {
+  gap: 8px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.result:hover .result__icon {
+  color: #EB5757;
+}
+
+.result:hover .result__text {
+  color: black;
+}
+
+.result__text {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4F4F4F;
+}
+
+.result__icon {
+  color: #4F4F4F;
 }
 
 .hero__wrapper {
