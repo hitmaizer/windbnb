@@ -9,6 +9,7 @@ export default styled.div`
         max-height: 269px;
         width: 395px;
         border-radius: 24px;
+        object-fit: cover;
     }
 
     .stays__details {
