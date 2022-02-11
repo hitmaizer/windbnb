@@ -1,0 +1,28 @@
+.navbar {
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 96px;
+}
+
+input {
+    border: none;
+    text-indent: 16px;
+    height: 58px;
+}
+
+.navbar__img {
+    width: 150px;
+}
+
+.navbar__search {
+    border: 1px solid $offWhite;
+    border-radius: 16px;
+    padding: 4px 8px;
+    align-items: center;
+}
+
+.search__icon {
+    color: $primary;
+    cursor: pointer;
+    
+}
