@@ -1,0 +1,37 @@
+.hero__wrapper {
+    padding: 32px;
+}
+
+.hero__titles {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+
+}
+
+.hero__title {
+    font-family: $montserrat;
+    font-style: normal;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $darkGray;
+ 
+}
+
+.hero__count {
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $mediumGray;
+}
+
+.stays__section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 40px;
+}
