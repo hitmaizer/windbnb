@@ -82,7 +82,6 @@ export default function Searchbar(props) {
                                     </div>
                                 </div>
                                 }
-
                             </div>
                         </div>
             </Drawer>
