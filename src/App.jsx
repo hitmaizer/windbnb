@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Hero from './components/Hero';
@@ -7,22 +8,43 @@ import Data from './stays.json'
 
 
 
+
 export default function App() {
     const [data, setData] = React.useState([])
+    const [filteredData, setFilteredData] = React.useState([])
+    const [wordEntered, setWordEntered] = React.useState("")
+    
 
     React.useEffect(() => {
         const fetchedData = Data
         setData(fetchedData)
     }, [])
 
-    console.log(data)
+    const handleFilter = (e) => {
+        const searchWord = event.target.value
+        setWordEntered(searchWord)
+        const newFilter = data.filter((value) => {
+            return value.city.toLowerCase().includes(searchWord.toLowerCase())
+        })
+        if (searchWord === "") {
+            setFilteredData([])
+        } else {
+            setFilteredData(newFilter)
+        }
+    }
+
+    const clearInput = () => {
+        setFilteredData([])
+        setWordEntered("")
+    }
+
+    
 
     return (
         <ThemeProvider theme={Theme}>
             <div className="page__wrapper">
-                
-                <Navbar data={data} />
-                <Hero data={data} />
+                <Navbar data={data} handleFilter={() => handleFilter()} filteredData={filteredData} wordEntered={wordEntered} clearInput={clearInput}/>
+                <Hero data={data} filteredData={filteredData} />
                 <footer className="footer__sign">created by <b><u>Jose Alves</u></b> - devChallenges.io </footer>
             </div>
         </ThemeProvider>
