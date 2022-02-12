@@ -5,6 +5,8 @@ import { nanoid } from 'nanoid'
 import { LocationPin } from '@styled-icons/entypo/LocationPin'
 import { Close } from '@styled-icons/evaicons-solid/Close'
 import Button from '@mui/material/Button';
+import { PlusSquare } from '@styled-icons/fa-regular/PlusSquare'
+import { MinusSquare } from '@styled-icons/fa-regular/MinusSquare'
 
 export default function Searchbar(props) {
     const [state, setState] = React.useState(false)
@@ -71,18 +73,33 @@ export default function Searchbar(props) {
                         
                     </div>
             </div>
-                    {props.filteredData.length !== 0 && 
-                    <div className="data__result">
-                        {props.filteredData.map((value, key) => {
-                            return (
-                                <div className="result flex-row" key={nanoid()}>
-                                    <LocationPin size="24px" className="result__icon" />
-                                    <p className="result__text">{value.city}, {value.country}</p>
+                    <div className="results__container flex-row">
+                        {props.filteredData.length !== 0 && 
+                        <div className="data__result">
+                            {props.filteredData.map((value, key) => {
+                                return (
+                                    <div className="result flex-row" key={nanoid()}>
+                                        <LocationPin size="24px" className="result__icon" />
+                                        <p className="result__text">{value.city}, {value.country}</p>
+                                    </div>
+                                )
+                            })}
+                        </div> 
+                        }
+                        <div className="guests__wrapper flex-col">
+                            <div className="guests__item">
+                                <h3 className="item__title">Adults</h3>
+                                <p className="item__description">Ages 13 or above</p>
+                                <div className="item__counter flex-row">
+                                    <PlusSquare size="24px"/>
+                                    <p className="counter__number">0</p>
+                                    <MinusSquare size="24px"/>
+
                                 </div>
-                            )
-                        })}
-                    </div> 
-                    }
+                            </div>
+
+                        </div>
+                    </div>
                     
         </div>
     )
