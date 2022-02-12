@@ -47,7 +47,7 @@ export default function Searchbar(props) {
                                 </div>
                             </div>
                             <div className="results flex-row">
-                                {props.filteredData.length !== 0 && 
+                                {state === true && 
                                     <div className="data__result">
                                     {props.filteredData.map((value, key) => {
                                         return (
@@ -59,6 +59,30 @@ export default function Searchbar(props) {
                                     })}
                                     </div> 
                                 }
+
+                                {state === true &&
+                                <div className="guests__wrapper flex-col">
+                                    <div className="guests__item flex-col">
+                                        <h3 className="item__title">Adults</h3>
+                                        <p className="item__description">Ages 13 or above</p>
+                                        <div className="item__counter flex-row">
+                                            <MinusSquare size="24px" className="counter__icon" id="minus1" onClick={props.removeAdult}/>
+                                            <p className="counter__number" id="number">{props.countAdults}</p>
+                                            <PlusSquare size="24px" className="counter__icon" id="plus1" onClick={props.addAdult}/>
+                                        </div>
+                                    </div>
+                                    <div className="guests__item flex-col">
+                                        <h3 className="item__title">Children</h3>
+                                        <p className="item__description">Ages 2-12</p>
+                                        <div className="item__counter flex-row">
+                                            <MinusSquare size="24px" className="counter__icon" id="minus2" onClick={props.removeChild} />
+                                            <p className="counter__number" id="number2">{props.countChildren}</p>
+                                            <PlusSquare size="24px" className="counter__icon" id="plus2" onClick={props.addChild} />
+                                        </div>
+                                    </div>
+                                </div>
+                                }
+
                             </div>
                         </div>
             </Drawer>
@@ -70,7 +94,6 @@ export default function Searchbar(props) {
                     </div>
                     <div className="search__icon">
                         {props.filteredData.length === 0 ? <Search size="24px" /> : <Close size="24px" id="clearBtn" onClick={props.clearInput} />}
-                        
                     </div>
             </div>
                     <div className="results__container flex-row">
@@ -86,26 +109,6 @@ export default function Searchbar(props) {
                             })}
                         </div> 
                         }
-                        <div className="guests__wrapper flex-col">
-                            <div className="guests__item flex-col">
-                                <h3 className="item__title">Adults</h3>
-                                <p className="item__description">Ages 13 or above</p>
-                                <div className="item__counter flex-row">
-                                    <MinusSquare size="24px" className="counter__icon" id="minus1" onClick={props.removeAdult}/>
-                                    <p className="counter__number" id="number">{props.countAdults}</p>
-                                    <PlusSquare size="24px" className="counter__icon" id="plus1" onClick={props.addAdult}/>
-                                </div>
-                            </div>
-                            <div className="guests__item flex-col">
-                                <h3 className="item__title">Children</h3>
-                                <p className="item__description">Ages 2-12</p>
-                                <div className="item__counter flex-row">
-                                    <MinusSquare size="24px" className="counter__icon" id="minus2" onClick={props.removeChild} />
-                                    <p className="counter__number" id="number2">{props.countChildren}</p>
-                                    <PlusSquare size="24px" className="counter__icon" id="plus2" onClick={props.addChild} />
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     
         </div>
