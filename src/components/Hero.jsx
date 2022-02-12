@@ -3,8 +3,18 @@ import StaysCard from '../components/StaysCard'
 import { nanoid } from 'nanoid'
 
 export default function Hero(props) {
+    const [printedElements, setPrintedElements] = React.useState([])
 
-    const cardElements = props.filteredData.map(work => <StaysCard 
+    React.useEffect(() => {
+        if(props.filteredData.length === 0) {
+            setPrintedElements(props.data)
+        } else {
+            setPrintedElements(props.filteredData)
+        }
+    }, [props.filteredData, props.data])
+
+
+    const cardElements = printedElements.map(work => <StaysCard 
         key={nanoid()}
         superHost={work.superHost}
         beds={work.beds}
