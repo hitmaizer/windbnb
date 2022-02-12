@@ -13,6 +13,7 @@
     border: none;
     text-indent: 16px;
     height: 58px;
+    position: relative;
 }
 
 .navbar__img {
@@ -52,6 +53,11 @@
         }
     }
     
+}
+
+.results__container {
+    gap: 64px;
+    position: absolute;
 }
 
 .result__text {
@@ -132,4 +138,9 @@
 .counter__icon {
     color: $lightGray;
     cursor: pointer;
+}
+
+.results {
+    margin-top: 16px;
+    gap: 480px;
 }

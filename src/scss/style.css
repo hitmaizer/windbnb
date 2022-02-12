@@ -52,6 +52,7 @@ body {
   border: none;
   text-indent: 16px;
   height: 58px;
+  position: relative;
 }
 
 .navbar__img {
@@ -90,6 +91,11 @@ body {
 
 .result:hover .result__text {
   color: black;
+}
+
+.results__container {
+  gap: 64px;
+  position: absolute;
 }
 
 .result__text {
@@ -167,6 +173,11 @@ body {
 .counter__icon {
   color: #828282;
   cursor: pointer;
+}
+
+.results {
+  margin-top: 16px;
+  gap: 480px;
 }
 
 .hero__wrapper {
