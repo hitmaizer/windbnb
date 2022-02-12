@@ -7,7 +7,17 @@ export default function Navbar(props) {
             <div className="navbar__logo">
                 <img src="images/logo.svg" alt="" className="navbar__img" />
             </div>
-            <Searchbar data={props.data} handleFilter={props.handleFilter} filteredData={props.filteredData} wordEntered={props.wordEntered} clearInput={props.clearInput}/>
+            <Searchbar data={props.data} 
+            handleFilter={props.handleFilter} 
+            filteredData={props.filteredData} 
+            wordEntered={props.wordEntered} 
+            clearInput={props.clearInput} 
+            addAdult={props.addAdult} 
+            removeAdult={props.removeAdult}
+            addChild={props.addChild}
+            removeChild={props.removeChild}
+            countAdults={props.countAdults}
+            countChildren={props.countChildren}/>
         </nav>
     )
 }
