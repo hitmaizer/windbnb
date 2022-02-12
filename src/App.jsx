@@ -20,6 +20,7 @@ export default function App() {
         setData(fetchedData)
     }, [])
 
+
     const handleFilter = (e) => {
         const searchWord = event.target.value
         setWordEntered(searchWord)
