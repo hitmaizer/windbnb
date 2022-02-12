@@ -69,9 +69,21 @@ export default function App() {
                 wordEntered={wordEntered} 
                 clearInput={clearInput} 
                 addAdult={() => setAdultCount(adultCount + 1)} 
-                removeAdult={() => setAdultCount(adultCount - 1)}
+                removeAdult={() => setAdultCount(() => {
+                    if(adultCount > 0) {
+                        return adultCount - 1
+                    } else {
+                        return adultCount
+                    }
+                })}
                 addChild={() => setChildrenCount(childrenCount + 1)}
-                removeChild={() => setChildrenCount(childrenCount - 1)}
+                removeChild={() => setChildrenCount(() => {
+                    if(childrenCount > 0) {
+                        return childrenCount - 1
+                    } else {
+                        return childrenCount
+                    }
+                })}
                 countAdults={adultCount}
                 countChildren={childrenCount}/>
                 <Hero data={data} filteredData={filteredData} />
