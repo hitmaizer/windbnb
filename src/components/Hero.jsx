@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid'
 
 export default function Hero(props) {
 
-    const cardElements = props.data.map(work => <StaysCard 
+    const cardElements = props.filteredData.map(work => <StaysCard 
         key={nanoid()}
         superHost={work.superHost}
         beds={work.beds}
