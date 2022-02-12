@@ -62,9 +62,9 @@ export default function Searchbar(props) {
             </Drawer>
                     </div>
                     <div className="search__guests">
-                    <Button onClick={toggleDrawer(true)}>
-                        <input type="number" className="search__input" placeholder="Add guests" />
-                    </Button>
+                        <Button onClick={toggleDrawer(true)}>
+                            <input type="number" className="search__input" placeholder="Add guests" />
+                        </Button>
                     </div>
                     <div className="search__icon">
                         {props.filteredData.length === 0 ? <Search size="24px" /> : <Close size="24px" id="clearBtn" onClick={props.clearInput} />}
