@@ -29,7 +29,7 @@ export default function Hero(props) {
         <div className="hero__wrapper">
             <div className="hero__titles flex-row">
                 <h1 className="hero__title">Stays in Finland</h1>
-                <h5 className="hero__count">12+ stays</h5>
+                <h5 className="hero__count">{printedElements.length} stays</h5>
             </div>
             <div className="stays__section">
                 {cardElements}
