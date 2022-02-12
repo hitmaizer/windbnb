@@ -19,9 +19,6 @@ export default function Searchbar(props) {
             }
         }
 
-
-    
-
     return (
         <div className="searchbar__wrapper">
             <div className="navbar__search flex-row">
