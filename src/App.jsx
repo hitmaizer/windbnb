@@ -7,8 +7,6 @@ import Theme from './theme/Theme'
 import Data from './stays.json'
 
 
-
-
 export default function App() {
     const [data, setData] = React.useState([])
     const [filteredData, setFilteredData] = React.useState([])
@@ -40,25 +38,6 @@ export default function App() {
         setFilteredData([])
         setWordEntered("")
     }
-
-
-
-    /* function addAdult() {
-        setCount({...count, Adults: + 2})
-        console.log(count.Adults)
-    }
-    
-    function removeAdult() {
-        setCount({...count, Adults: - 1})
-    }
-    
-    function addChild() {
-        setCount({...count, Children: + 1})
-    }
-    
-    function removeChild() {
-        setCount({...count, Children: - 1})
-    } */
     
     return (
         <ThemeProvider theme={Theme}>
