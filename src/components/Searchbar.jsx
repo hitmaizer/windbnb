@@ -7,29 +7,8 @@ import { Close } from '@styled-icons/evaicons-solid/Close'
 import Button from '@mui/material/Button';
 
 export default function Searchbar(props) {
-    /* const [filteredData, setFilteredData] = React.useState([])
-    const [wordEntered, setWordEntered] = React.useState("") */
     const [state, setState] = React.useState(false)
-    // const dataSearch = props.data
-
-    /* const handleFilter = (event) => {
-        const searchWord = event.target.value
-        setWordEntered(searchWord)
-        const newFilter = dataSearch.filter((value) => {
-            return value.city.toLowerCase().includes(searchWord.toLowerCase())
-        })
-        if (searchWord === "") {
-            setFilteredData([])
-        } else {
-            setFilteredData(newFilter)
-        }
-    } */
-
-    /* const clearInput = () => {
-        setFilteredData([])
-        setWordEntered("")
-    } */
-
+    
     //your first function
     function toggleDrawer(open) {
         //your secound function
