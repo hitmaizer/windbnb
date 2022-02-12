@@ -125,6 +125,50 @@ body {
   width: 426px;
 }
 
+.guests__wrapper {
+  gap: 16px;
+}
+
+.guests__item {
+  gap: 16px;
+}
+
+.item__title {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+
+.item__description {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #828282;
+}
+
+.item__counter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.counter__number {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+
+.counter__icon {
+  color: #828282;
+  cursor: pointer;
+}
+
 .hero__wrapper {
   padding: 32px;
 }

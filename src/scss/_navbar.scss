@@ -90,3 +90,46 @@
 .input--drawer {
     width: 426px;
 }
+
+.guests__wrapper {
+    gap: 16px;
+}
+
+.guests__item {
+    gap: 16px;
+}
+
+.item__title {
+    font-family: $mulish;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darkGray;
+}
+
+.item__description {
+    font-family: $mulish;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $lightGray;
+}
+
+.item__counter {
+    align-items: center;
+    gap: 16px;
+
+}
+
+.counter__number {
+    font-family: $mulish;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darkGray;
+}
+
+.counter__icon {
+    color: $lightGray;
+    cursor: pointer;
+}
