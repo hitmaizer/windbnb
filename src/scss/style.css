@@ -227,6 +227,20 @@ body {
   gap: 40px;
 }
 
+@media (max-width: 1199px) {
+  .stays__section {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .stays__section {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .footer__sign {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
