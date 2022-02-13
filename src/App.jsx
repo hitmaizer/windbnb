@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable no-restricted-globals */
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
