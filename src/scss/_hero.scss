@@ -34,4 +34,12 @@
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
     gap: 40px;
+
+    @include respond-below(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-below(sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 }
