@@ -25,7 +25,9 @@ export default function App() {
         const searchWord = event.target.value
         setWordEntered(searchWord)
         const newFilter = data.filter((value) => {
-            return value.city.toLowerCase().includes(searchWord.toLowerCase())
+            if(value.maxGuests > adultCount + childrenCount) {
+                return value.city.toLowerCase().includes(searchWord.toLowerCase())
+            }
         })
         if (searchWord === "") {
             setFilteredData([])
@@ -39,6 +41,7 @@ export default function App() {
         setWordEntered("")
     }
     
+
     return (
         <ThemeProvider theme={Theme}>
             <div className="page__wrapper">
